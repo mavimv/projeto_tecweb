@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    {% for mensagem in mensagens %}
+        {% if loop.first %}
+        <ul>
+        {% endif %}
+            <li>{{ mensagem }}</li>
+        {% if loop.last %}
+        </ul>
+        {% endif%}
+    {% else %}
+        <p>Nenhuma mensagens</p>
+    {% endfor %}
+{% endblock %}
